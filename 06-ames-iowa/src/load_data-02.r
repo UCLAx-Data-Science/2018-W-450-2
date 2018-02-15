@@ -16,6 +16,7 @@ count_empty_total <- function (){
 
 rownames(housing_df) <- housing_df$Id 
 housing_df$Id <- NULL
+housing_df$X <- NULL
 
 housing_df$MSSubClass <- as.factor(housing_df$MSSubClass)
 housing_df$OverallQual <- as.factor(housing_df$OverallQual)
