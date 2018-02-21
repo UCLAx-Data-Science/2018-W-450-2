@@ -1,5 +1,4 @@
 from IPython import get_ipython
-from matplotlib import cm
 get_ipython().run_line_magic('matplotlib', 'inline')
 
 import matplotlib.pyplot as plt
@@ -30,7 +29,7 @@ def pca_results(good_data, pca):
     fig, ax = plt.subplots(figsize = (14,8))
 
     # Plot the feature weights as a function of the components
-    components.plot(ax = ax, kind = 'bar');
+    components.plot(ax = ax, kind = 'bar', colormap=cm.viridis);
     ax.set_ylabel("Feature Weights")
     ax.set_xticklabels(dimensions, rotation=0)
 
